@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<article class="card">
+  <h1>{{ page.title }}</h1>
+  <p class="muted">{{ page.city }} · {{ page.address }}</p>
+
+  <div class="grid cols-2">
+    <section>
+      <div class="prose">{{ content }}</div>
+      <ul class="details-list">
+        <li><strong>מחיר:</strong> {{ page.price | default: "לא צוין" }}</li>
+        <li><strong>כרטיסים:</strong> {% if page.tickets %}<a href="{{ page.tickets }}" target="_blank" rel="noopener">רכישת כרטיסים</a>{% else %}—{% endif %}</li>
+        <li><strong>חניה:</strong> {{ page.parking | default: "—" }}</li>
+        <li><strong>רשתות:</strong>
+          {% if page.social.instagram %}<a href="{{ page.social.instagram }}" target="_blank" rel="noopener">Instagram</a>{% endif %}
+          {% if page.social.facebook %} · <a href="{{ page.social.facebook }}" target="_blank" rel="noopener">Facebook</a>{% endif %}
+          {% if page.social.tiktok %} · <a href="{{ page.social.tiktok }}" target="_blank" rel="noopener">TikTok</a>{% endif %}
+        </li>
+      </ul>
+      <p><a href="/{{ page.city | downcase }}.html" class="btn">חזרה לרשימת {{ page.city }}</a></p>
+    </section>
+    <section>
+      <div id="map" style="height: 320px; border-radius: 12px; border: 1px solid #334155;"></div>
+    </section>
+  </div>
+
+  {% if page.images and page.images.size > 0 %}
+    <h2>גלריית תמונות</h2>
+    <div class="grid cols-2">
+      {% for img_path in page.images %}
+        <img src="{{ img_path | relative_url }}" alt="{{ page.title }}" loading="lazy">
+      {% endfor %}
+    </div>
+  {% endif %}
+</article>
+
+<script>
+  const map = L.map('map').setView([{{ page.lat }}, {{ page.lon }}], 15);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+  L.marker([{{ page.lat }}, {{ page.lon }}]).addTo(map)
+    .bindPopup('{{ page.title | escape }}')
+    .openPopup();
+</script>
