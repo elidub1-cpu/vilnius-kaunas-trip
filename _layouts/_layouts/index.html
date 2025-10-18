@@ -1,0 +1,52 @@
+---
+layout: default
+title: לוח זמנים ומידע חי
+---
+<div class="card">
+  <h2>לוח זמנים</h2>
+  <table class="table">
+    <thead>
+      <tr><th>יום</th><th>פרטים</th><th>מפת היום</th></tr>
+    </thead>
+    <tbody>
+      {% for day in site.data.schedule.days %}
+      <tr>
+        <td><strong>{{ day.date_label }}</strong></td>
+        <td>
+          <ul>
+            {% for item in day.items %}
+              <li>
+                <strong>{{ item.time }}:</strong> {{ item.title }}
+                {% if item.address %} ·
+                  <a href="https://www.google.com/maps/search/?api=1&query={{ item.address | url_encode }}" target="_blank" rel="noopener">מפה</a>
+                {% endif %}
+                {% if item.parking %} ·
+                  <a href="https://www.google.com/maps/search/?api=1&query={{ item.parking | url_encode }}" target="_blank" rel="noopener">חניה</a>
+                {% endif %}
+                {% if item.route %} ·
+                  <a href="{{ item.route }}" target="_blank" rel="noopener">מסלול</a>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </td>
+        <td>
+          {% if day.mymap_url %}
+            <a class="btn" href="{{ day.mymap_url }}" target="_blank" rel="noopener">מפת היום (My Maps)</a>
+          {% else %}
+            —
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2>מידע שימושי</h2>
+  <ul>
+    <li><strong>מלון:</strong> {{ site.data.useful.hotel.name }} — {{ site.data.useful.hotel.address }}</li>
+    <li><strong>רכב:</strong> איסוף: {{ site.data.useful.car.pickup.when }} · {{ site.data.useful.car.pickup.where }} | החזרה: {{ site.data.useful.car.dropoff.when }} · {{ site.data.useful.car.dropoff.where }}</li>
+  </ul>
+</div>
