@@ -1,0 +1,61 @@
+{
+  "days": [
+    {
+      "date": "2025-11-10",
+      "date_label": "10/11 שני — הגעה וטיול ערב",
+      "mymap_url": "PASTE-MYMAP-LINK-DAY-1",
+      "items": [
+        { "time": "15:35", "title": "נחיתה VNO", "address": "Vilnius Airport (VNO)" },
+        { "time": "17:00", "title": "צ׳ק-אין Hotel Vilnia", "address": "Maironio g. 1, 01124 Vilnius" },
+        { "time": "18:00–20:30", "title": "סיור ערב רגלי", "address": "Cathedral Square, Vilnius",
+          "route": "https://www.google.com/maps/dir/?api=1&origin=Hotel+Vilnia,+Maironio+g.+1,+Vilnius&destination=Hotel+Vilnia,+Maironio+g.+1,+Vilnius&travelmode=walking&waypoints=Bernardine+Garden+Vilnius|St+Anne's+Church+Vilnius|Literatu+g+Vilnius|Cathedral+Square+Vilnius|Town+Hall+Square+Vilnius|Glass+Quarter+Vilnius"
+        }
+      ]
+    },
+    {
+      "date": "2025-11-11",
+      "date_label": "11/11 שלישי — סיור מטריות + המשך עיר",
+      "mymap_url": "PASTE-MYMAP-LINK-DAY-2",
+      "items": [
+        { "time": "10:30–12:30", "title": "סיור מטריות", "address": "Cathedral Square, Vilnius" },
+        { "time": "12:30–14:00", "title": "צהריים", "address": "Pilies g. 16, Vilnius" },
+        { "time": "14:00–16:00", "title": "אונ׳ וילנה", "address": "Universiteto g. 3, Vilnius" },
+        { "time": "16:00–17:00", "title": "מוזיאון האשליות", "address": "Vokiečių g. 8, Vilnius" },
+        { "time": "17:00–18:00", "title": "אוז׳ופיס", "address": "Užupio g. 13, Vilnius" },
+        { "time": "19:00–20:30", "title": "ארוחת ערב", "address": "Gedimino pr. 26, Vilnius",
+          "route": "https://www.google.com/maps/dir/?api=1&origin=Cathedral+Square,+Vilnius&destination=Gedimino+pr.+26,+Vilnius&travelmode=walking&waypoints=Pilies+g.+16,+Vilnius|Universiteto+g.+3,+Vilnius|Vokieciu+g.+8,+Vilnius|Uzupio+g.+13,+Vilnius"
+        }
+      ]
+    },
+    {
+      "date": "2025-11-12",
+      "date_label": "12/11 רביעי — רכב: קרנאווה → קובנה",
+      "mymap_url": "PASTE-MYMAP-LINK-DAY-3",
+      "items": [
+        { "time": "09:00", "title": "איסוף רכב", "address": "Konstitucijos pr. 18, Vilnius" },
+        { "time": "10:00–12:00", "title": "קרנאווה", "address": "Kernavė Archaeological Site", "parking": "Senovės g. 10, Kernavė",
+          "route": "https://www.google.com/maps/dir/?api=1&origin=Konstitucijos+pr.+18,+Vilnius&destination=Senoves+g.+10,+Kernave&travelmode=driving"
+        },
+        { "time": "14:30–17:30", "title": "קובנה — סיבוב עתיקה", "address": "Kaunas Castle / Town Hall",
+          "route": "https://www.google.com/maps/dir/?api=1&origin=Senoves+g.+10,+Kernave&destination=Pilies+g.,+Kaunas&travelmode=driving"
+        }
+      ]
+    },
+    {
+      "date": "2025-11-13",
+      "date_label": "13/11 חמישי — טראקאי → אאוטלט → החזרת רכב",
+      "mymap_url": "PASTE-MYMAP-LINK-DAY-4",
+      "items": [
+        { "time": "09:00–12:00", "title": "טירת האי טראקאי", "address": "Trakai Island Castle", "parking": "Karaimų g. 56, Trakai",
+          "route": "https://www.google.com/maps/dir/?api=1&origin=Maironio+g.+1,+Vilnius&destination=Karaimu+g.+56,+Trakai&travelmode=driving"
+        },
+        { "time": "13:00–16:00", "title": "Vilnius Outlet", "address": "V. Pociūno g. 8, Vilnius", "parking": "V. Pociūno g. 8, Vilnius",
+          "route": "https://www.google.com/maps/dir/?api=1&origin=Karaimu+g.+56,+Trakai&destination=V.+Pociuno+g.+8,+Vilnius&travelmode=driving"
+        },
+        { "time": "17:00", "title": "החזרת רכב", "address": "Konstitucijos pr. 18, Vilnius",
+          "route": "https://www.google.com/maps/dir/?api=1&origin=V.+Pociuno+g.+8,+Vilnius&destination=Konstitucijos+pr.+18,+Vilnius&travelmode=driving"
+        }
+      ]
+    }
+  ]
+}
