@@ -1,0 +1,51 @@
+---
+layout: default
+title: וילנה — אטרקציות ומסעדות
+---
+<div class="card">
+  <h2>אטרקציות — וילנה</h2>
+  <table class="table">
+    <thead><tr><th>שם</th><th>כתובת</th><th>מחיר</th><th>קישורים</th></tr></thead>
+    <tbody>
+      {% for a in site.data.attractions_vilnius %}
+      <tr>
+        <td>
+          {{ a.name }}
+          {% if a.featured and a.slug %}
+            · <a href="/attractions/{{ a.slug }}/">מידע נוסף</a>
+          {% endif %}
+          <br><small>{{ a.description }}</small>
+        </td>
+        <td>{{ a.address }}</td>
+        <td>{{ a.price | default: "—" }}</td>
+        <td>
+          {% if a.tickets %}<a href="{{ a.tickets }}" target="_blank">כרטיסים</a>{% endif %}
+          {% if a.address %} · <a href="https://www.google.com/maps/search/?api=1&query={{ a.address | url_encode }}" target="_blank">מפה</a>{% endif %}
+          {% if a.parking %} · <a href="https://www.google.com/maps/search/?api=1&query={{ a.parking | url_encode }}" target="_blank">חניה</a>{% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2>מסעדות/קפה — וילנה</h2>
+  <table class="table">
+    <thead><tr><th>שם</th><th>מטבח</th><th>סוג</th><th>כתובת</th><th>קישורים</th></tr></thead>
+    <tbody>
+      {% for r in site.data.restaurants_vilnius %}
+      <tr>
+        <td>{{ r.name }}<br><small>{{ r.description }}</small></td>
+        <td>{{ r.cuisine | default: "—" }}</td>
+        <td>{{ r.category | default: "—" }}</td>
+        <td>{{ r.address }}</td>
+        <td>
+          {% if r.booking %}<a href="{{ r.booking }}" target="_blank">הזמנה</a>{% endif %}
+          {% if r.address %} · <a href="https://www.google.com/maps/search/?api=1&query={{ r.address | url_encode }}" target="_blank">מפה</a>{% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
