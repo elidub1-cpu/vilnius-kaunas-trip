@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Cathedral Square",
+    "description": "הלב הפועם של וילנה, כיכר מרכזית ומרשימה.",
+    "address": "Katedros a., Vilnius",
+    "price": "חינם",
+    "tickets": "",
+    "social": {},
+    "parking": "",
+    "featured": true,
+    "slug": "vilnius-cathedral-square"
+  },
+  {
+    "name": "Museum of Illusions",
+    "description": "מוזיאון אינטראקטיבי עם אשליות אופטיות וחדרים מיוחדים.",
+    "address": "Vokiečių g. 8, Vilnius",
+    "price": "כ-15€",
+    "tickets": "https://vilnil.lt/tickets/",
+    "social": { "instagram": "https://www.instagram.com/museumofillusions_vilnius/" },
+    "parking": "",
+    "featured": true,
+    "slug": "vilnius-museum-of-illusions"
+  }
+]
