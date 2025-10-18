@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Etno Dvaras",
+    "description": "מטבח ליטאי קלאסי ליד Pilies.",
+    "cuisine": "ליטאי",
+    "category": "מסעדה",
+    "address": "Pilies g. 16, Vilnius",
+    "booking": "",
+    "social": {}
+  },
+  {
+    "name": "The Town Steakhouse",
+    "description": "סטייקהאוס קלאסי במרכז.",
+    "cuisine": "בשרים",
+    "category": "סטייקהאוס",
+    "address": "Gedimino pr. 26, Vilnius",
+    "booking": "",
+    "social": {}
+  }
+]
