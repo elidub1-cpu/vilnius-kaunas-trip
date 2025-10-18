@@ -1,0 +1,12 @@
+{
+  "hotel": {
+    "name": "Hotel Vilnia",
+    "address": "Maironio g. 1, 01124 Vilnius",
+    "checkin": "מ-14:00",
+    "checkout": "עד 12:00"
+  },
+  "car": {
+    "pickup": { "when": "12/11 09:00", "where": "Konstitucijos pr. 18, Vilnius" },
+    "dropoff": { "when": "13/11 17:00", "where": "Konstitucijos pr. 18, Vilnius" }
+  }
+}
