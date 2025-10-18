@@ -1,0 +1,9 @@
+# _config.yml
+title: "הטיול שלנו לווילנה וקובנה"
+description: "נובמבר 2025 - כל המידע במקום אחד."
+theme: jekyll-theme-minimal
+
+collections:
+  attractions:
+    output: true
+    permalink: /attractions/:path/
