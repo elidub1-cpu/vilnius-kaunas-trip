@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Kaunas Castle",
+    "description": "טירה היסטורית ונקודת פתיחה לסיור בעיר העתיקה.",
+    "address": "Pilies g., Kaunas",
+    "price": "—",
+    "tickets": "",
+    "social": {},
+    "parking": "Pilies g., Kaunas",
+    "featured": true,
+    "slug": "kaunas-castle"
+  },
+  {
+    "name": "Kaunas Town Hall",
+    "description": "לב העיר ההיסטורית של קובנה.",
+    "address": "Rotušės aikštė, Kaunas",
+    "price": "—",
+    "tickets": "",
+    "social": {},
+    "parking": "Rotušės aikštė, Kaunas",
+    "featured": true,
+    "slug": "kaunas-town-hall"
+  }
+]
